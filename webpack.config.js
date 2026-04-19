@@ -5,6 +5,9 @@ module.exports = {
       {
         test: /\.tsx?$/,
         loader: "ts-loader",
+        options: {
+          transpileOnly: true,
+        },
       },
     ],
   },
@@ -16,10 +19,7 @@ module.exports = {
     library: "EditorJSLayout",
     libraryTarget: "umd",
   },
-  externals: {
-    "bootstrap": "bootstrap",
-  },
   optimization: {
-    minimize: true
-  }
+    minimize: true,
+  },
 };
